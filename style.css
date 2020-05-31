@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url("img/bg3.svg") no-repeat;
+	background-position: top;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: #3a3a3a;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Nav */
+#logo {
+	padding: 7px 10px;
+}
+
+#logo img {
+	max-width: 100%;
+	height: auto;
+	transition: all 0.5s cubic-bezier(.8, 1.8, .75, .75);
+}
+
+#logo img:hover {
+	transform: rotate(5deg) scale(1.1);
+	transition: all 0.5s cubic-bezier(.8, 1.8, .75, .75);
+	cursor: pointer;
+}
+
+h1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo-txt {
+	color: #3a3a3a;
+}
+
+#nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+}
+
+.nav-list {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-link {
+	padding: 0 30px 0 0;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.nav-link a {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+.nav-link a:hover {
+	color: rgb(238, 137, 4);
+	transition: .5s;
+}
+
+/* Top-Container */
+
+.top-container {
+	margin: 20px auto;
+	padding: 20% 10% 0 10%;
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-gap: 20px;
+	grid-column-gap: 20px;
+}
+
+header {
+	color: #3a3a3a;
+	font-weight: 700;
+	padding: 10px 0 10px 0;
+}
+
+.para {
+	font-size: 18px;
+}
+
+/* Main */
+#main-content {
+	padding: 2rem;
+	border-radius: 70px 0;
+	border: 1px solid #e6e6e6;
+	background-color: rgba(238, 164, 52, 0.526);
+}
+
+/* About */
+.about {
+	padding: 2rem;
+	border-radius: 0 70px;
+	border: 1px solid #e6e6e6;
+	background-color: rgba(255, 247, 235, 0.526);
+}
+
+/* Portfolio */
+
+#portfolio {
+	margin: auto;
+	text-align: center;
+	padding-top: 130px;
+	font-size: 25px;
+	color: #3a3a3a;
+	width: 70%;
+}
+
+.portfolio {
+	padding: 40px 100px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(250px, 1fr)
+	);
+}
+
+.img img {
+	width: 100%;
+	box-shadow: var(--shadow);
+	/* border: 1px solid #e6e6e6; */
+	border-radius: 25%;
+	transition: .5s;
+}
+
+.img img:hover {
+	transform: scale(1.05);
+	transition: .5s;
+}
+
+/*  Contact - Form*/
+#contact {
+	padding-top: 300px;
+}
+
+#contact h3 {
+	text-align: center;
+	color: #fec024;
+	font-size: 25px;
+}
+
+#contact-form {
+	display: grid;
+	width: 50%;
+	margin: auto;
+	color: linen;
+	font-size: 1.5rem;
+}
+
+input {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#textf {
+	margin-bottom: 5px;
+}
+
+#submit {
+	display: flex;
+	justify-content: center;
+}
+
+textarea {
+	height: 300px;
+	resize: none;
+}
+
+button {
+	margin-top: 20px;
+	padding: 20px;
+	width: 200px;
+	background-color: rgb(0, 0, 0);
+	border: none;
+	font-size: 1.5rem;
+	color: #fec024;
+}
+
+button:hover {
+	background-color: #fec024;
+	color: black;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+	color: white;
+}
+
+input,
+select,
+textarea {
+	background-color: rgba(112, 112, 112);
+	border: none;
+	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5rem;
+	padding: 10px;
+}
+
+::placeholder {
+	color: white;
+}
+
+/* footer */
+
+#footer {
+	position: relative;
+	background: url("img/footer.svg") no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	min-height: 300px;
+}
+
+.footerp {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.footerp a {
+	color: #3a3a3a;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+	.top-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#portfolio {
+		font-size: 15px;
+	}
+
+	.portfolio {
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(150px, 1fr)
+		);
+		padding: 20px 20px;
+	}
+
+	#contact {
+		padding-top: 350px;
+	}
+
+	#contact-form {
+		display: grid;
+		width: 80%;
+	}
+}
