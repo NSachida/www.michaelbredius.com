@@ -3,16 +3,12 @@ body {
 }
 
 .container {
-	width: 10em;
-	margin: 0 auto;
-	position: fixed;
-	top: 20%;
-	left: 35%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .logo {
-	/* width: 10em; */
-	/* height: 10em; */
 	animation: bounceIn 0.6s;
 	transform: rotate(0deg) scale(1) translateZ(0);
 	transition: all 0.7s cubic-bezier(.8, 1.8, .75, .75);
