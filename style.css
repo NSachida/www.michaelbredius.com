@@ -236,7 +236,7 @@ textarea {
 .footerp {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	left: 0;
 	padding: 10px;
 	font-size: 14px;
 }
@@ -273,6 +273,7 @@ textarea {
 		display: grid;
 		width: 80%;
 	}
+
 	/* start of hamburger */
 
 	.line {
@@ -332,7 +333,7 @@ textarea {
 	}
 
 	.nav-links li a:hover {
-		color: red;
+		color: #3a3a3a;
 		transition: all 0.5s ease-in;
 	}
 
@@ -349,12 +350,31 @@ textarea {
 	#nav-bar {
 		display: unset;
 	}
-}
 
+	input,
+	select,
+	textarea,
+	button {
+		font-size: 1rem;
+	}
+
+	textarea {
+		height: 200px;
+	}
+
+	#contact-form {
+		font-size: 1rem;
+	}
+
+	#contact h3 {
+		font-size: 1.2rem;
+	}
+}
 @media only screen and (max-width: 550px) {
 	.nav-links {
 		background: url("img/menu550.svg");
 		height: 80vh;
+		min-height: 100%;
 		width: 100%;
 	}
 }
